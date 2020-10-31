@@ -1,0 +1,74 @@
+<app-slider 
+    [nombre]="'Películas'"
+    [size] ="'small'"
+>
+</app-slider>
+
+<div class="center">
+
+    <div id="favorita">
+        <h2 class="subheader">Película favorita</h2>
+        <!--
+        {{favorita.titulo}}            
+        -->
+    </div>
+
+    <section id="content">
+        <h1 class="subheader">Películas</h1>
+        <!--
+        <h2>{{titulo}}</h2>
+        <button (click)="cambiarTitulo()">Pulsame</button>
+        <hr />
+        -->
+        <!--
+    Directivas de Angular
+    Ejemplos de cada una de ellas
+
+
+        <h3>Mostrando peliculas</h3>
+        {{peliculas[0].title}}
+
+        <hr />
+-->
+        <!--
+    Uso de directivas condicionales
+    Atributo a una etiqueta HTML 
+    Ifs: *ngIf{
+        atributo que se le pone a una etiqueta o elemento de html 
+        que le agrega una funcionalidad a esa etiqueta
+    }
+-->
+        <!--
+        <h3>Número de películas</h3>
+        <div *ngIf="peliculas.length <= 3">
+            <p>Hay pocas peliculas</p>
+        </div>
+        <div *ngIf="peliculas.length > 3">
+            <p>Hay muchas peliculas</p>
+        </div>
+
+        <hr />
+        -->
+        <!--
+            Uso de directivas condicionales
+            *ngFor{
+                Recorrer todo un arreglo de elementos
+            }
+
+            *ngCLass{
+                se pueden importar clases especificas del css
+            }
+        -->
+        <div id="articles" *ngIf="peliculas">
+            <div *ngFor="let pelicula of peliculas;">
+                <app-pelicula
+                    [pelicula] = "pelicula"
+                    (MarcarFavorita)="mostrarFavorita($event)"
+                >
+                </app-pelicula>
+            </div>
+        </div>
+    </section>
+    <app-sidebar></app-sidebar>
+
+</div>
