@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>Maquetación Web</title>
+</head>
+<body>
+
+    <!--Cabecera-->
+    <header id="header">
+        <div class="center">
+            <!--Logo-->
+            <div id="logo">
+                <img src="./assets/img/vue.svg" alt="Logotipo" class="app-logo">
+                <span id="brand">
+                    <strong>Curso</strong>Vue
+                </span>
+            </div>
+            <!--Barra de navegación-->
+            <nav id="menu">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="blog.html">Blog</a>
+                    </li>
+                    <li>
+                        <a href="formulario.html">Formulario</a>
+                    </li>
+                    <li>
+                        <a href="#">Pagina 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Pagina 2</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--Limpiar flotantes-->
+            <div class="clearfix"></div>
+        </div>
+    </header>
+    <!--Sidebar-->
+    <div class="center">
+        <section id="content">
+            <h1 class="subheader">Formulario</h1>
+            <form class="mid-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre"/>
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido"/>
+                </div>
+                <div class="form-group">
+                    <label for="bio">Biografía</label>
+                    <textarea name="bio" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="form-group radioButtons">
+                    <input type="radio" name="genero" id="" value="hombre"/>Hombre
+                    <input type="radio" name="genero" id="" value="mujer"/>Mujer
+                    <input type="radio" name="genero" id="" value="otro"/>Otro
+                </div>
+                <div class="clearfix"></div>
+                <input type="submit" value="Enviar" class="btn btn-success">
+
+            </form>
+
+        </section>
+
+        <aside id="sidebar">
+            <div id="nav-blog" class="sidebar-item">
+                <h3>Publica algo</h3>
+                <a href="#" class="btn btn-success">Crear publicación</a>
+            </div>
+            <div id="search" class="sidebar-item">
+                <h3>Buscador</h3>
+                <p>Encuentra algo</p>
+                <form action="">
+                    <input type="text" name="search">
+                    <input type="submit" name="submit" value="Buscar" class="btn">
+                </form>
+            </div>
+        </aside>
+        <div class="clearfix"></div>
+    </div>
+
+    <!--Footer-->
+    <footer id="footer">
+        <div class="center">
+            <p>
+                &copy; Desarrollado por Sebastián Marroquín
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
